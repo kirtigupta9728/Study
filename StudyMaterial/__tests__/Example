@@ -1,0 +1,176 @@
+// import React from 'react';
+// import {cleanup, fireEvent, render} from '@testing-library/react-native';
+// import SignUpScreen from '../../app/views/auth/SignUpScreen';
+// import {getTestID} from '../../app/common/helper';
+
+// const props = {
+//   navigation: {
+//     navigate: jest.fn(),
+//     addListener: jest.fn((event, handler) => {
+//       handler();
+//     }),
+//   },
+//   onBiometricToggled: jest.fn(),
+//   isKeepMeSignIn: false,
+//   setKeepSignIn: jest.fn,
+//   isUseFaceIdForSignIn: false,
+//   biometricType: 'Touch ID',
+//   setFaceIdForSignIn: jest.fn,
+//   isPasswordSecure: true,
+//   setPassword: jest.fn,
+//   shopOption: '',
+//   setShopOption: jest.fn,
+//   inputParams: {
+//     email: '',
+//     firstName: '',
+//     lastName: '',
+//     zipCode: '',
+//     password: '',
+//   },
+//   isEmailInUse: true,
+//   validationResponse: {
+//     isContainSpace: 'isContainSpace',
+//   },
+//   setValidation: jest.fn(),
+//   isValidationMode: true,
+//   setValidationMode: jest.fn(),
+//   setFormLevelError: jest.fn(),
+//   showFormLevelError: true,
+//   setInputParams: jest.fn,
+//   setSubmitPressed: jest.fn(),
+//   submitPressed: false,
+//   route: {
+//     params: {
+//       inputValues: 'test',
+//     },
+//   },
+//   keepMeSigInToggled: jest.fn,
+// };
+
+// const props2 = {
+//   navigation: {
+//     navigate: jest.fn(),
+//     addListener: jest.fn((event, handler) => {
+//       handler();
+//     }),
+//   },
+//   isKeepMeSignIn: true,
+//   setKeepSignIn: jest.fn,
+//   isUseFaceIdForSignIn: true,
+//   setFaceIdForSignIn: jest.fn,
+//   isPasswordSecure: false,
+//   setPassword: jest.fn,
+//   shopOption: '',
+//   setShopOption: jest.fn,
+//   inputParams: {
+//     email: '',
+//     firstName: '',
+//     lastName: '',
+//     zipCode: '',
+//     password: '',
+//   },
+//   isEmailInUse: false,
+//   setSubmitPressed: jest.fn(),
+//   submitPressed: false,
+//   validationResponse: {},
+//   setValidation: jest.fn(),
+//   isValidationMode: false,
+//   setValidationMode: jest.fn(),
+//   setFormLevelError: jest.fn(),
+//   showFormLevelError: false,
+//   setInputParams: jest.fn,
+// };
+
+// afterEach(cleanup);
+// const renderScreen = prop => render(<SignUpScreen {...prop} />);
+
+// describe('Success test Cases for SignUpScreen', () => {
+//   afterEach(cleanup);
+//   it('To render with props', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+//   it('To render with props2', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props2);
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+
+//   it('to check that the page is getting rendered successfully when Pressable 16 clicked', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('Pressable161');
+//     fireEvent.press(button);
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+//   it('to check that the page is getting rendered successfully when Pressable 20 clicked', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('Pressable20');
+//     fireEvent.press(button);
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+
+//   it('to check that the page is getting rendered successfully when Pressable 2 clicked', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId(getTestID('Pressable2'));
+//     fireEvent.press(button);
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+//   it('to check that the page is getting rendered successfully when entering data in email', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('email');
+//     fireEvent(button, 'onSubmitEditing', 'test2');
+//     fireEvent(button, 'onChangeText', 'test');
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+
+//   it('to check that the page is getting rendered successfully when press Pressable5', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('Pressable5');
+//     fireEvent(button, 'onChangeText', 'test');
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+
+//   it('to check that the page is getting rendered successfully when entering data in pressable11', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('Pressable11');
+//     fireEvent(button, 'onSubmitEditing', 'test2');
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+//   it('to check that the page is getting rendered successfully when entering data in phone', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('Pressable3');
+//     fireEvent(button, 'onSubmitEditing', 'test2');
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+
+//   it('to check that the page is getting rendered successfully when entering data in password', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('Pressable4');
+//     fireEvent(button, 'onSubmitEditing', 'test2');
+//     fireEvent(button, 'onChangeText', 'test2');
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+//   it('to check that the page is getting rendered successfully when entering data in zipcode', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('Pressable5');
+//     fireEvent(button, 'onSubmitEditing', 'test2');
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+//   it('to check that the page is getting rendered successfully clicking on rightIconPress', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('Pressable5');
+//     fireEvent(button, 'onRightIconPress', 'test2');
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+//   it('to check that the page is getting rendered successfully when Pressable 17 clicked', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('pressable17');
+//     fireEvent.press(button);
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+//   it('to check that the page is getting rendered successfully when Pressable 18 clicked', async () => {
+//     const renderScreenWithStoreResult = renderScreen(props);
+//     const button = await renderScreenWithStoreResult.findByTestId('pressable18');
+//     fireEvent.press(button);
+//     expect(renderScreenWithStoreResult).toBeTruthy();
+//   });
+// });

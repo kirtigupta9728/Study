@@ -1,0 +1,25 @@
+// Call Stack
+// We can consider Call Stack as a kitchen where all our code executed or cooked. Whenever we try to run a piece of code, it goes to call stack first and then executed. It works in LIFO style. That is Last In First Out.
+
+// const lunch = () => console.log("It's time for lunch!");
+
+// const dinner = () => console.log("It's time for dinner!");
+
+// const breakfast = () => {
+//   console.log("Time to breakfast!");
+//   setTimeout(lunch, 3000);
+//   dinner();
+// };
+
+// breakfast();
+
+
+// If we run the code above, The global execution context main() runs on the browser, and JS engine will start to read the code from the first line and will search for tasks. On the last line, one function is called. So, this function will go to the Call Stack and will execute the tasks. First it will print Time to breakfast! , then goes to the next line, where we have an asynchronous block of code.
+// As we know, JavaScript is synchronous and single-threaded language, this asynchronous block of code goes to the call stack and suddenly pops out. Here JS engine takes help from it's assistant, Web API. The setTimeout() waits on the Web API and after it's timer runs out (In this case, 3 seconds), After 3 seconds the callback function goes to the Callback Queue and waits for Call stack to be free. By this time, Call stack runs the other piece of codes. Prints
+
+// It's time for dinner!
+
+
+// Event Loop
+// Event loop is just a guardian who keeps a good communication with Call Stack and Callback Queue. It checks if the call stack is free, then lets know the callback queue. Then Callback queue passes the callback function to Call stack to be executed. When all the callback functions are executed, the call stack is out and global execution context is free.
+
