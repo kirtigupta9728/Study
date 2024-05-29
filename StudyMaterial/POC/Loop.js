@@ -10,10 +10,6 @@ for(let i in data){
     console.log('for in',i) // name, id
 }
 
-// for(let i of data){
-//     console.log('for of',i) // error
-// }
-
 let data1=[10,11,12,13,14,15]
 
 for(let i in data1){
