@@ -1,0 +1,18 @@
+.mainContainer{
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42, 42, 75);
+}
+.container{
+    width: 40%;
+    height:350px;
+    border-radius: 10px;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+}
