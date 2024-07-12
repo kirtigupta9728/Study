@@ -1,0 +1,52 @@
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    /* border: 2px solid red; */
+    background-color: rgb(8, 8, 92);
+}
+
+.topView {
+    margin-top: 5%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.hiperlinkText {
+    color: hsl(217, 78%, 47%);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.hiperlinkText:hover {
+    text-decoration: underline;
+    /* Add underline on hover */
+    color: rgb(150, 9, 9);
+}
+
+.verticalLine {
+  height: 15px;
+  width: 2px;
+  border-left: 2px solid rgb(167, 150, 150);
+  margin: 0 8px; /* Adjust margin as needed */
+}
+
+.horizentalLine {
+    width: 100%;
+    border-top: 1px solid rgb(167, 150, 150);
+    margin:0; /* Adjust margin as needed */
+}
+.quantity{
+margin-top: 20px;
+}
+.marginTop-20 {
+    margin-top: 20px;
+}
+.marginTop-10 {
+    margin-top:10px;
+}

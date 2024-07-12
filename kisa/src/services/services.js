@@ -116,38 +116,38 @@ export function sendPostRequest(url, body, contentType) {
 //         })
 // }
 
-// export function sendDeletetRequest(url, params) {
-//     return instance
-//         .delete(url, {
-//             params: { ...params }
-//         })
-//         .then((response) => {
-//             // console.log("response.data", response.data)
-//             return response;
-//         })
-//         .catch((err) => {
-//             // console.log('post-api-error', err);
-//             if (err.response === undefined) {
-//                 return {
-//                     status: '400',
-//                     data: '',
-//                     message: 'something went wrong!'
-//                 };;
-//             } else {
-//                 return {
-//                     status: err?.response?.status,
-//                     data: '',
-//                     message: 'Something went wrong'//err.response.data.message
-//                 };
-//             }
+export function sendDeletetRequest(url, params) {
+    return instance
+        .delete(url, {
+            params: { ...params }
+        })
+        .then((response) => {
+            // console.log("response.data", response.data)
+            return response;
+        })
+        .catch((err) => {
+            // console.log('post-api-error', err);
+            if (err.response === undefined) {
+                return {
+                    status: '400',
+                    data: '',
+                    message: 'something went wrong!'
+                };;
+            } else {
+                return {
+                    status: err?.response?.status,
+                    data: '',
+                    message: 'Something went wrong'//err.response.data.message
+                };
+            }
 
 
-//         })
-//         .finally(() => {
-//             // hide loader
-//             //   dispatch(toggleLoader());
-//         });
-// }
+        })
+        .finally(() => {
+            // hide loader
+            //   dispatch(toggleLoader());
+        });
+}
 // export function sendPutRequest(url, params) {
 //     return instance
 //         .put(url, params)

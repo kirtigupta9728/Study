@@ -2,13 +2,17 @@ import { TextField,Button } from '@mui/material';
 import { useState } from 'react';
 import APIConstants from '../services/APIConstants';
 import { sendPostRequest } from '../services/services';
-import './login.css'
+import '../component/css/login.css'
+import { useNavigate } from 'react-router-dom';
+import { Routes } from '../route/config';
+
 const Login = () => {
    const [userName,setUserName]=useState("");
    const [password,setPassowrd]=useState("")
+   const navigate = useNavigate();
 
    const onSubmit=async()=>{
-    console.log('userName',userName)
+    navigate(Routes.Dashboard);
     const body={
         username:userName,
         password:password

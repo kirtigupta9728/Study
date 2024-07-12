@@ -1,0 +1,47 @@
+.container {
+    background-color: rebeccapurple;
+}
+.tile{
+    height: 60px;
+    background-color:rgb(10, 10, 41) ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px ;
+    position:fixed;
+    width: 101%;
+}
+.text{
+    color: white;
+    font-size: 12px;
+}
+.location{
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.column{
+    flex-direction: column;
+    margin-left: 10px;
+}
+.styled-span {
+    color: white;
+    font-weight: bold;
+  }
+  .logo-image {
+    width:100%;
+    height: 100%;
+  }
+  .imagediv{
+    width: 100%;
+    height:500px;
+  }
+  .cardView{
+    margin: 20px;
+  }
+
+  .cartView{
+    
+  }
