@@ -5,7 +5,6 @@ app.get('/login', async(req,res,next)=>{
     try{
         const db=await dataBase('User');
         const userdb=await db.find().toArray();
-        console.log('userdb',userdb);
         res.json(userdb);
 
     } catch(ex){
